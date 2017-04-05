@@ -1,40 +1,43 @@
-13KB ¼æÈİIE6ÒÔÉÏä¯ÀÀÆ÷£¬chrome£¬firefox£¬ÊÖ»úä¯ÀÀÆ÷ jquery ²å¼şajaxÎÄ¼şÉÏ´«£¬
-¶ÔÓÚ²»Ö§³Öajax form dataÉÏ´«µÄIE8ºÍIE8ÒÔÏÂä¯ÀÀÆ÷Í¨¹ı²»¿É¼ûµÄiframeÄ£ÄâajaxÌá½»
-########Í¼Æ¬ÉÏ´«#########
+
+13KB å…¼å®¹IE6ä»¥ä¸Šæµè§ˆå™¨ï¼Œchromeï¼Œfirefoxï¼Œæ‰‹æœºæµè§ˆå™¨ jquery æ’ä»¶ajaxæ–‡ä»¶ä¸Šä¼ ï¼Œ
+å¯¹äºä¸æ”¯æŒajax form dataä¸Šä¼ çš„IE8å’ŒIE8ä»¥ä¸‹æµè§ˆå™¨é€šè¿‡ä¸å¯è§çš„iframeæ¨¡æ‹Ÿajaxæäº¤
+
+########å›¾ç‰‡ä¸Šä¼ #########
 $(formId + selector).ajaxFileUpload({
         width: 1000,
         url: 'upload.php',
         onChange: function (filename) {
-            alert("ÉÏ´«ÎÄ¼şÃûÊÇ"+filename);
+            alert("ä¸Šä¼ æ–‡ä»¶åæ˜¯"+filename);
         },
         onSubmit: function (filename) {
-            alert("ÕıÔÚÌá½»"+filename);
+            alert("æ­£åœ¨æäº¤"+filename);
         },
         onProgress: function (percentComplete) {
-            alert("ÒÑÉÏ´«£º" + percentComplete + "%");
+            alert("å·²ä¸Šä¼ ï¼š" + percentComplete + "%");
         },
         onComplete: function (response, filename, base64) {
-			//response ÊÇ·şÎñ¶Ë·µ»ØµÄÏûÏ¢
-            alert("ÉÏ´«Í¼Æ¬µÄbase64±àÂë£¨IE8ÒÔÉÏä¯ÀÀÆ÷ÓĞĞ§£©"+ base64);
+			//response æ˜¯æœåŠ¡ç«¯è¿”å›çš„æ¶ˆæ¯
+            alert("ä¸Šä¼ å›¾ç‰‡çš„base64ç¼–ç ï¼ˆIE8ä»¥ä¸Šæµè§ˆå™¨æœ‰æ•ˆï¼‰"+ base64);
         },
         onError: function (filename) {
-			//´íÎó´¦Àí
+			//é”™è¯¯å¤„ç†
         }
     });
-########ÎÄ¼şÉÏ´«#########
+    
+########æ–‡ä»¶ä¸Šä¼ #########
 $(formId + selector).ajaxFileUpload({
         url: $$.ROOT + 'do-uploadAttach.php',
 		onChange: function (filename) {
-            alert("ÉÏ´«ÎÄ¼şÃûÊÇ"+filename);
+            alert("ä¸Šä¼ æ–‡ä»¶åæ˜¯"+filename);
         },
         onSubmit: function (filename) {
-            alert("ÕıÔÚÌá½»"+filename);
+            alert("æ­£åœ¨æäº¤"+filename);
         },
         onComplete: function (response, filename, base64) {
-           	//response ÊÇ·şÎñ¶Ë·µ»ØµÄÏûÏ¢
-            alert("ÉÏ´«Í¼Æ¬µÄbase64±àÂë£¨µ±ÊÇÍ¼Æ¬ÎÄ¼şÊ± IE8ÒÔÉÏä¯ÀÀÆ÷ÓĞĞ§£©"+ base64);
+           	//response æ˜¯æœåŠ¡ç«¯è¿”å›çš„æ¶ˆæ¯
+            alert("ä¸Šä¼ å›¾ç‰‡çš„base64ç¼–ç ï¼ˆå½“æ˜¯å›¾ç‰‡æ–‡ä»¶æ—¶ IE8ä»¥ä¸Šæµè§ˆå™¨æœ‰æ•ˆï¼‰"+ base64);
         },
         onError: function (filename) {
-			//´íÎó´¦Àí
+			//é”™è¯¯å¤„ç†
         }
     });
